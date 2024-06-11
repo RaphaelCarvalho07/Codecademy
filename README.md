@@ -25,4 +25,4 @@ Here you will find projects related to:
 
 ## Contact
 
-For questions, suggestions, or collaboration opportunities, please contact me via [raphael.carvalho@qaguardians.tech] or [[your LinkedIn](https://www.linkedin.com/in/raphael-carvalho-675147130/)].
+For questions, suggestions, or collaboration opportunities, please contact me via [raphael.carvalho@qaguardians.tech] or [https://www.linkedin.com/in/raphael-carvalho-675147130].
