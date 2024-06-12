@@ -28,3 +28,11 @@ h1 {
     font-weight: bold;
     color: blue;
 }
+
+#frame{
+    background-color: lightcoral;
+}
+
+#paint{
+    background-color: skyblue;
+}
