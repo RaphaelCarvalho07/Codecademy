@@ -1,0 +1,30 @@
+h1,
+h2,
+h3,
+p {
+    font-family: "Helvetica", sans-serif;
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: bold;
+    color: khaki;
+    background-image: url(../img/img1.jpeg);
+    text-align: center;
+}
+
+.item h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+#brush {
+    background-color: mediumspringgreen;
+
+}
+
+.price {
+    font-weight: bold;
+    color: blue;
+}
