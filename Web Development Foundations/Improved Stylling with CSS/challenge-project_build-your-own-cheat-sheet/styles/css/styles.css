@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: gainsboro;
+}
+
+table {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: rebeccapurple;
+    text-align: center;
+}
+
+table {
+    border: 2px solid darkorchid;
+    width: 650px;
+    margin: 0 auto;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+
+th {
+    background-color: #cd23e8;
+}
+
+td {
+    padding: 15px;
+    text-align: left;
+    display: table-cell;
+    vertical-align: inherit;
+    border-top: 1px solid darkorchid;
+
+}
+
+code {
+    font-family: 'Courier New', monospace;
+    background-color: beige;
+    padding: 2px 5px;
+}
