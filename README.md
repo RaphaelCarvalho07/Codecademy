@@ -16,6 +16,15 @@ Here you will find projects related to:
 - Each folder is named according to the Codecademy course or module and contains the corresponding projects.
 - Inside each folder, there is a specific README.md with details about the project, including objectives, execution instructions, and lessons learned.
 
+## Codecademy Full Stack Engineer Course Modules
+
+- [**Web Development Foundations**](/Web-Development-Foundations): Covers the basics of HTML, CSS, and JavaScript to lay the groundwork for web development.
+- **Build Interactive Websites:** Focuses on enhancing websites with interactive elements using JavaScript and the Document Object Model (DOM).
+- **Front-end Development:** Delves into advanced front-end technologies and frameworks such as React to create dynamic user interfaces.
+- **Back-end Development:** Introduces server-side development with Node.js and Express, including database integration with SQL and MongoDB.
+- **Full-Stack Development:** Combines front-end and back-end skills to build complete web applications, emphasizing RESTful API design and deployment.
+- **Interview Prep:** Offers guidance and practice on technical interviewing, including algorithm and data structure questions, to prepare for job interviews.
+
 ## Objectives
 
 - **Organization:** Keep all projects in one place for easy access and review.
