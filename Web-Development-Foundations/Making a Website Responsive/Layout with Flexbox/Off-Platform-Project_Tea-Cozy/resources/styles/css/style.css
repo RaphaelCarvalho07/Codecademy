@@ -5,6 +5,17 @@ body {
     scroll-behavior: smooth;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
 @media (max-width: 768px) {
     body {
         font-size: 18px;
@@ -150,6 +161,10 @@ footer {
     box-sizing: border-box; /* Garante que o padding não adicione à largura total */
 }
 
+#featured-teas {
+    margin-bottom: 75px; /* Adiciona uma margem inferior de 50px para criar espaço antes da seção #locations */
+}
+
 #featured-teas .tea {
     display: inline-block;
     margin: 10px;
@@ -164,6 +179,63 @@ footer {
 #featured-teas .tea figcaption {
     margin-top: 10px;
     color: seashell;
+}
+
+#locations {
+    position: relative; /* Torna a posição do #locations relativa para que o h2 possa ser posicionado absolutamente em relação a ele */
+    background-image: url('../../images/img-locations-background.jpg');
+    width: 1200px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+}
+
+#locations h2 {
+    position: absolute; /* Posiciona o h2 absolutamente dentro de seu contêiner relativo */
+    top: 90px; /* Posiciona no topo do contêiner #locations */
+    left: 50%; /* Move o h2 para 50% da esquerda do contêiner */
+    transform: translateX(-50%); /* Desloca o h2 para trás pela metade de sua largura, centralizando-o */
+    z-index: 2; /* Garante que o h2 fique acima do background-image */
+}
+
+.location-boxes {
+    margin-top: 15px; /* Ajusta a margem superior para 15px */
+    display: flex;
+    justify-content: space-between; /* Espaça as caixas igualmente */
+    flex-wrap: wrap; /* Permite que as caixas se ajustem em várias linhas conforme necessário */
+    gap: 40px; /* Define um espaço de 40px entre as caixas */
+    margin-top: 15px; /* Adiciona margem superior de 15px para manter a distância do h2 Locations */
+}
+
+.location-box {
+    width: 300px;
+    margin: 15px 20px; /* Adjusting margin to create space between the boxes */
+    background-color: #000; /* Ajusta para o tom de preto do site */
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 1; /* Ajusta a opacidade para 1 */
+    display: flex; /* Usa flexbox para permitir que os itens internos se ajustem conforme necessário */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    gap: 10px; /* Adiciona um espaço de 10px entre cada item (parágrafo) dentro da caixa */
+}
+
+.location-box p {
+    margin: 0; /* Remove a margem padrão dos parágrafos para permitir o controle total pelo gap do flexbox */
+    padding: 0; /* Garante que não haja padding adicional afetando o layout */
+}
+
+.location-box p {
+    margin: 0; /* Remove a margem padrão dos parágrafos para permitir o controle total pelo gap do flexbox */
+    padding: 0; /* Garante que não haja padding adicional afetando o layout */
+}
+
+.location-box h3,
+.location-box p {
+    margin: 10px 0;
 }
 
 footer a {
