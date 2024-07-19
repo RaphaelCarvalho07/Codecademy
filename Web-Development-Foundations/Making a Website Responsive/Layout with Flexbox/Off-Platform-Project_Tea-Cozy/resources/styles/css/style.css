@@ -1,5 +1,5 @@
 body {
-    background-color: black; /* Ou qualquer cor de fundo desejada */
+    background-color: black;
     font-family: Helvetica, sans-serif;
     font-size: 22px;
     scroll-behavior: smooth;
@@ -31,11 +31,11 @@ body {
     }
 
     .header-logo {
-        height: 40px; /* Reduz o tamanho do logo para dispositivos menores */
+        height: 40px;
     }
 
     .header nav ul li {
-        margin-left: 10px; /* Reduz o espaço entre os itens da lista */
+        margin-left: 10px;
     }
 }
 
@@ -59,79 +59,62 @@ footer {
     width: 100%;
     height: 69px;
     z-index: 1000;
-    /* Garante que o cabeçalho fique acima de outros conteúdos */
     background-color: black;
-    /* Ou qualquer cor de fundo desejada */
     color: seashell;
-    /* Cor do texto */
     font-family: Helvetica, sans-serif;
     font-size: 22px;
     text-align: center;
     line-height: 69px;
-    /* Centraliza o texto verticalmente */
     border-bottom: 1px solid seashell;
-    /* Adiciona a borda inferior */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
-    /* Adiciona um pouco de espaço nas laterais */
     box-sizing: border-box;
-    /* Inclui padding e borda no cálculo da largura */
 }
 
 .header-logo {
     height: 50px;
-    /* Define a altura do logo */
     flex-shrink: 0;
-    /* Evita que o logo encolha, garantindo que ele mantenha seu tamanho */
 }
 
 .header nav {
     flex-grow: 1;
-    /* Permite que o <nav> ocupe todo o espaço disponível */
     display: flex;
     justify-content: flex-end;
-    /* Alinha o conteúdo de <nav> à direita */
     padding-right: 10px;
-    /* Adiciona espaço de 10px da borda direita */
 }
 
 .header nav ul {
     display: flex;
     list-style: none;
-    /* Remove os marcadores da lista */
     padding: 0;
-    /* Remove o padding padrão */
     margin: 0;
-    /* Remove a margem padrão */
 }
 
 .header nav ul li {
     margin-left: 20px;
-    /* Adiciona espaço entre os itens da lista */
 }
 
 .header nav ul li a {
     text-decoration: underline;
     color: seashell;
-    /* Ajuste a cor conforme necessário */
 }
 
 #mission {
     background-image: url('../../images/img-mission-background.jpg');
     height: 700px;
     width: 1200px;
-    margin: 60px auto 0; /* Ajusta a margem superior para evitar sobreposição com o cabeçalho fixo */
+    margin: 60px auto 0;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza o conteúdo verticalmente */
-    text-align: center; /* Centraliza o texto horizontalmente */
-    background-color: rgba(0, 0, 0, 0.5); /* Opção para sobreposição escura na imagem de fundo */
-    color: seashell; /* Mantém a consistência com o esquema de cores */
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: seashell;
     padding: 0;
-    box-sizing: border-box; /* Inclui padding no cálculo da altura e largura */
-    position: relative; /* Adiciona uma posição relativa para a sobreposição */
+    box-sizing: border-box;
+    position: relative;
 }
 
 #mission::before {
@@ -141,28 +124,28 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Sobreposição escura para cobrir a imagem de fundo */
-    z-index: -1; /* Garante que a sobreposição fique atrás do conteúdo */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
 }
 
 #mission h2,
 #mission h4 {
-    margin: 20px auto; /* Centraliza horizontalmente e adiciona espaço vertical */
-    width: auto; /* Ajusta a largura para ser automática, permitindo que o texto defina o tamanho */
-    color: seashell; /* Mantém a cor do texto para contraste */
-    box-sizing: border-box; /* Garante que o padding não adicione à largura total */
+    margin: 20px auto;
+    width: auto;
+    color: seashell;
+    box-sizing: border-box;
 }
 
 .mission-text {
-    background-color: black; /* Define a cor de fundo para o contêiner */
-    width: auto; /* Ajusta a largura para ser automática */
+    background-color: black;
+    width: auto;
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Garante que o padding não adicione à largura total */
+    box-sizing: border-box;
 }
 
 #featured-teas {
-    margin-bottom: 75px; /* Adiciona uma margem inferior de 50px para criar espaço antes da seção #locations */
+    margin-bottom: 75px;
 }
 
 #featured-teas .tea {
@@ -182,7 +165,7 @@ footer {
 }
 
 #locations {
-    position: relative; /* Torna a posição do #locations relativa para que o h2 possa ser posicionado absolutamente em relação a ele */
+    position: relative;
     background-image: url('../../images/img-locations-background.jpg');
     width: 1200px;
     height: 600px;
@@ -191,50 +174,71 @@ footer {
     flex-direction: column;
     align-items: center;
     padding-top: 15px;
-    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center;
+    margin-bottom: 0px;
 }
 
 #locations h2 {
-    position: absolute; /* Posiciona o h2 absolutamente dentro de seu contêiner relativo */
-    top: 90px; /* Posiciona no topo do contêiner #locations */
-    left: 50%; /* Move o h2 para 50% da esquerda do contêiner */
-    transform: translateX(-50%); /* Desloca o h2 para trás pela metade de sua largura, centralizando-o */
-    z-index: 2; /* Garante que o h2 fique acima do background-image */
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
 }
 
 .location-boxes {
-    margin-top: 15px; /* Ajusta a margem superior para 15px */
+    margin-top: 15px;
     display: flex;
-    justify-content: space-between; /* Espaça as caixas igualmente */
-    flex-wrap: wrap; /* Permite que as caixas se ajustem em várias linhas conforme necessário */
-    gap: 40px; /* Define um espaço de 40px entre as caixas */
-    margin-top: 15px; /* Adiciona margem superior de 15px para manter a distância do h2 Locations */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 15px;
 }
 
 .location-box {
     width: 300px;
-    margin: 15px 20px; /* Adjusting margin to create space between the boxes */
-    background-color: #000; /* Ajusta para o tom de preto do site */
+    margin: 15px 20px;
+    background-color: #000;
     padding: 10px;
     box-sizing: border-box;
-    opacity: 1; /* Ajusta a opacidade para 1 */
-    display: flex; /* Usa flexbox para permitir que os itens internos se ajustem conforme necessário */
-    flex-direction: column; /* Organiza os itens em uma coluna */
-    gap: 10px; /* Adiciona um espaço de 10px entre cada item (parágrafo) dentro da caixa */
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .location-box p {
-    margin: 0; /* Remove a margem padrão dos parágrafos para permitir o controle total pelo gap do flexbox */
-    padding: 0; /* Garante que não haja padding adicional afetando o layout */
+    margin: 0;
+    padding: 0;
 }
 
 .location-box p {
-    margin: 0; /* Remove a margem padrão dos parágrafos para permitir o controle total pelo gap do flexbox */
-    padding: 0; /* Garante que não haja padding adicional afetando o layout */
+    margin: 0;
+    padding: 0;
 }
 
 .location-box h3,
 .location-box p {
+    margin: 10px 0;
+}
+
+footer {
+    height: 200px;
+    background-color: black;
+    color: seashell;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer h2 {
+    margin-top: 10px;
+}
+
+footer h2,
+footer h5 {
     margin: 10px 0;
 }
 
@@ -245,4 +249,19 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+footer h2,
+footer h5 {
+    margin: 25px 0;
+}
+
+body::after {
+    content: 'copyright The Tea Cozy 2017';
+    left: 20px;
+    bottom: 20px;
+    color: seashell; 
+    background-color: black;
+    padding: 10px;
+    text-align: left;
 }
