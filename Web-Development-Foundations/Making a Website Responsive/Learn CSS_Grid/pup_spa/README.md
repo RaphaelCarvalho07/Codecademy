@@ -28,13 +28,14 @@ We also utilized shorthand properties to simplify the code.
 
 The project structure is as follows:
 ```zsh
-root/
-└── resources/
-    └── styles/
-        └── css/
+root
+├── index.html 
+├── README.md
+└─– resources
+    └── styles
+        └── css
             ├── reset.css
             └── style.css
-└── index.html
 ```
 
 ## Key Features
