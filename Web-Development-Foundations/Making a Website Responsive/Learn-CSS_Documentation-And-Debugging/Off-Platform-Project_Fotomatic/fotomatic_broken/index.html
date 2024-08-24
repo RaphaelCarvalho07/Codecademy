@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fotomatic</title>
   <link href="https://fonts.googleapis.com/css?family=Damion" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="./resources/styles/css/reset.css">
   <link rel="stylesheet" href="./resources/styles/css/style.css">
+  <title>Fotomatic</title>
 </head>
+
 <body>
   <!-- Header -->
   <header>
@@ -19,14 +19,16 @@
         <ul>
           <li><a href="#">Product detail</a></li>
           <li><a href="#">About us</a></li>
-          <li><a href="https://www.instagram.com/">Follow us <img class="icon" src="./resources/images/instagram.png" alt="Instagram"></a></li>
+          <li><a href="https://www.instagram.com/" target="_blank">Follow us <img class="icon"
+                src="./resources/images/instagram.png"></a></li>
+          <li><a href="#" class="button">Join us</a></li>
         </ul>
       </nav>
       <nav class="mobile">
         <ul>
-          <li><a href="#"><img src="./resources/images/ic-logo.svg" alt="Logo"></a></li>
-          <li><a href="#"><img src="./resources/images/ic-product-detail.svg" alt="Product detail"></a></li>
-          <li><a href="#"><img src="./resources/images/ic-about-us.svg" alt="About us"></a></li>
+          <li><a href="#"><img src="./resources/images/ic-logo.svg"></a></li>
+          <li><a href="#"><img src="./resources/images/ic-product-detail.svg"></a></li>
+          <li><a href="#"><img src="./resources/images/ic-about-us.svg"></a></li>
           <li><a href="#" class="button">Join us</a></li>
         </ul>
       </nav>
@@ -34,80 +36,112 @@
   </header>
 
   <!-- Main Content -->
-  <main class="main-content">
+  <div class="main-content">
+
     <!-- Sign Up Section -->
-    <section id="sign-up-section" class="banner">
+    <div id="sign-up-section" class="banner">
       <div id="sign-up-cta">
         <div class="content center">
-          <section>
+          <div class="header">
             <h2 class="cursive">Instant</h2>
             <h1 class="striking">FORMAT CAMERA</h1>
-          </section>
+          </div>
           <div class="email">
             <span>
-              Email us to request a demo and be in our waiting list for the <strong>February 2017</strong> release!
+              Email us to request a demo and be in our waiting list for the <strong>Febuary 2017</strong> release!
             </span>
-            <button class="button">Join the waiting list</button>
+            <div class="button">Join the waiting list</div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+
+    <!-- Mission Section -->
+    <div id="mission-section">
+      <div class="content center">
+        <h2>Our Mission</h2>
+        <p>To revolutionize photography by providing instant, high-quality cameras that inspire creativity and capture
+          moments in an instant.</p>
+      </div>
+    </div>
 
     <!-- Features Section -->
-    <section id="features-section">
-      <article class="feature">
+    <div id="features-section">
+      <div class="feature">
         <div class="center">
           <div class="image-container">
-            <img src="./resources/images/feature-1.png" alt="Feature 1">
+            <img src="./resources/images/feature-1.png" />
           </div>
           <div class="content">
             <h2>Advanced, automatic, instant</h2>
-            <h3>Shutter speed, aperture and flash output adjust automatically</h3>
+            <h3>Shutter speed, apperture and flash output adjust automatically</h3>
           </div>
         </div>
-      </article>
-      <article class="feature">
+      </div>
+      <div class="feature">
         <div class="center">
           <div class="image-container">
-            <img src="./resources/images/feature-2.png" alt="Feature 2">
+            <img src="./resources/images/feature-2.png" />
           </div>
           <div class="content">
             <h2>Beautifully crafted inside-out</h2>
-            <h3>From the paint outside to the tiny screw inside, Fotomatic is crafted with love and 20-year of expertise</h3>
+            <h3>From the paint outside to the tiny screw inside, Fotomatic is crafted with love and 20-year of expertise
+            </h3>
           </div>
         </div>
-      </article>
-    </section>
+      </div>
+    </div>
 
     <!-- Filters Section -->
-    <section id="filters-section">
+    <div id="filters-section">
       <div class="content center">
         <h2>Over 20+ filters to choose from</h2>
-        <h3>Feed your creativity with 20 different filters designed by our eclectic in-house photographers!</h3>
+        <h3>Feed your creativity with 20 different filter designed by our eclectic in-house photographers!</h3>
       </div>
       <div class="images-container">
         <div class="image-container">
-          <img src="./resources/images/filter-1.png" alt="Filter 1">
+          <img src="./resources/images/filter-1.png" />
         </div>
         <div class="image-container">
-          <img src="./resources/images/filter-2.png" alt="Filter 2">
+          <img src="./resources/images/filter-2.png" />
         </div>
         <div class="image-container">
-          <img src="./resources/images/filter-3.png" alt="Filter 3">
+          <img src="./resources/images/filter-3.png" />
         </div>
         <div class="image-container extra">
-          <img src="./resources/images/filter-4.png" alt="Filter 4">
+          <img src="./resources/images/filter-4.png" />
         </div>
       </div>
-    </section>
+    </div>
+
+    <div id="team-section">
+      <div class="content center">
+        <h2>Meet Our Team</h2>
+        <div class="team-member">
+          <img src="./resources/images/staff/allie.png" alt="Allie">
+          <h3>Allie</h3>
+          <p>CEO & Founder</p>
+        </div>
+        <div class="team-member">
+          <img src="./resources/images/staff/andy.png" alt="Andy">
+          <h3>Andy</h3>
+          <p>Lead Designer</p>
+        </div>
+        <div class="team-member">
+          <img src="./resources/images/staff/jessica.png" alt="Jessica">
+          <h3>Jessica Jones</h3>
+          <p>Marketing</p>
+        </div>
+      </div>
+    </div>
 
     <!-- Quotes Section -->
-    <section id="quotes-section">
+    <div id="quotes-section">
       <div class="content center">
-        <blockquote class="quote">“It’s truly something that could create a brand new photography Renaissance”</blockquote>
-        <img class="quote-citation" src="./resources/images/photography-logo.png" alt="Photography logo">
+        <span class="quote">“It’s truly something that could create a brand new photography Renaissance”</span>
+        <img class="quote-citation" src="./resources/images/photography-logo.png" />
       </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -116,6 +150,8 @@
         <span class="location">Designed in NYC</span>
       </div>
     </footer>
-  </main>
+
+  </div>
 </body>
+
 </html>
