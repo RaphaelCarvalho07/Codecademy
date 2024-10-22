@@ -1,0 +1,12 @@
+// Purpose: Run all tests in the test folder
+require('./test/chunk.js')
+require('./test/clamp.js')
+require('./test/drop-while.js')
+require('./test/drop.js')
+require('./test/find-key.js')
+require('./test/has.js')
+require('./test/in-range.js')
+require('./test/invert.js')
+require('./test/lodash.js')
+require('./test/pad.js')
+require('./test/words.js')
