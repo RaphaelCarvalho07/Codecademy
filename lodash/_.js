@@ -25,6 +25,16 @@ const _ = {
     const endPaddingLength = len - str.length - startPaddingLength
     const paddedString = `${' '.repeat(startPaddingLength)}${str}${' '.repeat(endPaddingLength)}`
     return paddedString
+  },
+  has(obj, key){
+    return obj != null && Object.prototype.hasOwnProperty.call(obj, key)
+  },
+  invert(obj){
+    const result = {}
+    for(key in obj){
+      result[obj[key]] = key
+    }
+    return result
   }
 }
 
