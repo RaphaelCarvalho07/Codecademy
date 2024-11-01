@@ -14,10 +14,10 @@ const _ = {
     }
     return start <= number && number < end
   },
-  words (str) {
+  words(str) {
     return str.split(' ')
   },
-  pad (str, len) {
+  pad(str, len) {
     if (len <= str.length) {
       return str
     }
@@ -26,15 +26,26 @@ const _ = {
     const paddedString = `${' '.repeat(startPaddingLength)}${str}${' '.repeat(endPaddingLength)}`
     return paddedString
   },
-  has(obj, key){
+  has(obj, key) {
     return obj != null && Object.prototype.hasOwnProperty.call(obj, key)
   },
-  invert(obj){
+  invert(obj) {
     const result = {}
-    for(key in obj){
+    for (key in obj) {
       result[obj[key]] = key
     }
     return result
+  },
+  findKey(obj, predicate) {
+    for (const key in obj) {
+      if (obj.hasOwnProperty(key) && predicate(obj[key], key, obj)) {
+        return key;
+      }
+    }
+    return undefined;
+  },
+  drop(arr, n=1){
+    return arr.slice(n)
   }
 }
 
