@@ -44,7 +44,7 @@ const _ = {
     }
     return undefined;
   },
-  drop(arr, n=1){
+  drop(arr, n = 1) {
     return arr.slice(n)
   }
 }
