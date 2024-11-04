@@ -46,6 +46,10 @@ const _ = {
   },
   drop(arr, n = 1) {
     return arr.slice(n)
+  },
+  dropWhile(arr, predicate) {
+    const dropIndex = arr.findIndex((el, index) => !predicate(el, index, arr))
+    return dropIndex === -1 ? [] : this.drop(arr, dropIndex)
   }
 }
 
