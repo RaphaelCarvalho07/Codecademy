@@ -53,8 +53,8 @@ lodash-clone/
 │   ├── pad.js
 │   ├── runAllTests.js
 │   └── words.js
-├── [_.js](./_.js)
-└── [README.md](./README.md)
+├──  _.js
+└── README.md
 ```
 
 
