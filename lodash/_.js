@@ -50,6 +50,14 @@ const _ = {
   dropWhile(arr, predicate) {
     const dropIndex = arr.findIndex((el, index) => !predicate(el, index, arr))
     return dropIndex === -1 ? [] : this.drop(arr, dropIndex)
+  },
+  chunk(arr, size = 1) {
+    const chunkedArr = []
+    for (let i = 0; i < arr.length; i += size) {
+      chunkedArr.push(arr.slice(i, i + size))
+    }
+    return chunkedArr
+
   }
 }
 
