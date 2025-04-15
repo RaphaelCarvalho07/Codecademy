@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raphael Carvalho</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <header>
         <h1>Welcome to My Portfolio</h1>
@@ -17,40 +19,83 @@
             </ul>
         </nav>
     </header>
-    
+
     <section id="about">
         <h2>About Me</h2>
-        <p>A brief description about you and your skills.</p>
+        <p>Hello! I'm Raphael Carvalho, a passionate full-stack developer. I specialize in creating interactive and
+            responsive web applications using modern technologies.</p>
     </section>
-    
+
     <section id="projects">
         <h2>My Projects</h2>
-        <ul>
-            <li><a href="projects/project1.html">Project 1</a></li>
-            <!-- Add more projects here -->
-        </ul>
-    </section>
     
+        <!-- Projeto Lodash -->
+        <article class="accordion">
+            <header>
+                <button class="accordion-toggle" aria-expanded="false" aria-controls="lodash-content">
+                    Lodash Clone
+                </button>
+            </header>
+            <section id="lodash-content" class="accordion-content" hidden>
+                <figure>
+                    <img src="images/lodash-clone-thumbnail.jpg" alt="Lodash Clone Thumbnail">
+                    <figcaption>Lodash Clone - A custom implementation of the Lodash library.</figcaption>
+                </figure>
+                <p>A custom implementation of the Lodash library, showcasing JavaScript fundamentals and utility functions.</p>
+                <p><strong>Technologies:</strong> JavaScript</p>
+                <a href="projects/lodash-clone.html" class="btn">View Details</a>
+            </section>
+        </article>
+    
+        <!-- Projeto Cypress -->
+        <article class="accordion">
+            <header>
+                <button class="accordion-toggle" aria-expanded="false" aria-controls="cypress-content">
+                    Cypress - Advanced Module
+                </button>
+            </header>
+            <section id="cypress-content" class="accordion-content" hidden>
+                <figure>
+                    <img src="images/cypress-advanced-thumbnail.jpg" alt="Cypress Advanced Module Thumbnail">
+                    <figcaption>An advanced Cypress project demonstrating end-to-end testing.</figcaption>
+                </figure>
+                <p>An advanced Cypress project demonstrating end-to-end testing, custom commands, and CI/CD integration.</p>
+                <p><strong>Technologies:</strong> Cypress, JavaScript, Node.js</p>
+                <a href="projects/cypress-advanced.html" class="btn">View Details</a>
+            </section>
+        </article>
+    </section>
+
     <section id="contact">
         <h2>Contact</h2>
         <form>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
-            
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-            
+
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
-            
+
             <button type="submit">Send</button>
         </form>
     </section>
-    
+
     <footer>
         <p>&copy; 2025 Raphael Carvalho. All rights reserved.</p>
     </footer>
-    
+
+    <!-- Modal -->
+    <dialog id="imageModal" class="modal">
+        <figure>
+            <button class="close" aria-label="Close">&times;</button>
+            <img class="modal-content" id="modalImage" alt="Expanded project image">
+            <figcaption id="caption"></figcaption>
+        </figure>
+    </dialog>
+
     <script src="js/script.js"></script>
 </body>
+
 </html>

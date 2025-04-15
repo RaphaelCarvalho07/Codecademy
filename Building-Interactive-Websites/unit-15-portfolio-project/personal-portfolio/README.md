@@ -9,17 +9,17 @@ The project is organized as follows:
 ```
 personal-portfolio
 ├── src
-│   ├── index.html          # Main HTML document for the portfolio
+│   ├── index.html               # Main HTML document for the portfolio
 │   ├── css
-│   │   └── styles.css      # Styles for the portfolio website
+│   │   └── styles.css           # Styles for the portfolio website
 │   ├── js
-│   │   └── script.js       # JavaScript for interactivity
-│   ├── images              # Directory for images used in the portfolio
+│   │   └── script.js            # JavaScript for interactivity
+│   ├── images                   # Directory for images used in the portfolio
 │   └── projects
-│       └── project1.html   # Detailed view of a specific project
-├── .gitignore              # Files and directories to ignore by Git
-├── README.md               # Documentation for the project
-└── LICENSE                 # Licensing terms for the project
+│       └── lodash-clone.html    # Detailed view of a specific project
+├── .gitignore                   # Files and directories to ignore by Git
+├── README.md                    # Documentation for the project
+└── LICENSE                      # Licensing terms for the project
 ```
 
 ## Features
