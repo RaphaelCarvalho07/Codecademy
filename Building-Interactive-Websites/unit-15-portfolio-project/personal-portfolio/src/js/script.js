@@ -4,17 +4,26 @@ const modalImg = document.getElementById("modalImage");
 const captionText = document.getElementById("caption");
 const closeBtn = document.querySelector(".close");
 
-// Seleciona todas as imagens dentro de .project
-const images = document.querySelectorAll(".project img");
+// Função para abrir o modal
+function openModal(img) {
+    modal.showModal(); // Abre o modal
+    modalImg.src = img.src; // Define a imagem no modal
+    captionText.innerHTML = img.alt; // Define o texto da legenda
+}
 
-// Adiciona evento de clique para cada imagem
-images.forEach((img) => {
-    img.addEventListener("click", () => {
-        modal.showModal(); // Abre o modal
-        modalImg.src = img.src; // Define a imagem no modal
-        captionText.innerHTML = img.alt; // Define o texto da legenda
+// Função para anexar eventos de clique às imagens
+function attachImageClickEvents() {
+    const images = document.querySelectorAll(".accordion-content img");
+    images.forEach((img) => {
+        img.removeEventListener("click", handleImageClick); // Remove event listener duplicado
+        img.addEventListener("click", handleImageClick);
     });
-});
+}
+
+// Função para lidar com o clique na imagem
+function handleImageClick(event) {
+    openModal(event.target);
+}
 
 // Fecha o modal ao clicar no botão de fechar
 closeBtn.addEventListener("click", () => {
@@ -41,5 +50,13 @@ accordionToggles.forEach((toggle) => {
         const isExpanded = toggle.getAttribute("aria-expanded") === "true";
         toggle.setAttribute("aria-expanded", !isExpanded);
         content.hidden = isExpanded;
+
+        // Reanexa os eventos de clique nas imagens após expandir o acordeão
+        if (!isExpanded) {
+            attachImageClickEvents();
+        }
     });
 });
+
+// Inicializa os eventos de clique nas imagens
+attachImageClickEvents();
