@@ -1,62 +1,71 @@
-// Seleciona o modal
+// Selects the modal elements
 const modal = document.getElementById("imageModal");
 const modalImg = document.getElementById("modalImage");
 const captionText = document.getElementById("caption");
 const closeBtn = document.querySelector(".close");
 
-// Função para abrir o modal
+// Function to open the modal
 function openModal(img) {
-    modal.showModal(); // Abre o modal
-    modalImg.src = img.src; // Define a imagem no modal
-    captionText.innerHTML = img.alt; // Define o texto da legenda
+    modal.showModal(); // Opens the modal
+    modalImg.src = img.src; // Sets the image in the modal
+    captionText.innerHTML = img.alt; // Sets the caption text
 }
 
-// Função para anexar eventos de clique às imagens
+// Function to attach click events to images
 function attachImageClickEvents() {
     const images = document.querySelectorAll(".accordion-content img");
     images.forEach((img) => {
-        img.removeEventListener("click", handleImageClick); // Remove event listener duplicado
+        img.removeEventListener("click", handleImageClick); // Removes duplicate event listeners
         img.addEventListener("click", handleImageClick);
     });
 }
 
-// Função para lidar com o clique na imagem
+// Function to handle image click
 function handleImageClick(event) {
     openModal(event.target);
 }
 
-// Fecha o modal ao clicar no botão de fechar
+// Closes the modal when the close button is clicked
 closeBtn.addEventListener("click", () => {
-    modal.close(); // Fecha o modal
+    modal.close(); // Closes the modal
 });
 
-// Fecha o modal ao clicar fora da imagem
+// Closes the modal when clicking outside the image
 modal.addEventListener("click", (e) => {
     if (e.target === modal) {
         modal.close();
     }
 });
 
-// Seleciona todos os botões do acordeão
-const accordionToggles = document.querySelectorAll(".accordion-toggle");
+document.addEventListener("DOMContentLoaded", () => {
+    // Select all accordion buttons
+    const accordionToggles = document.querySelectorAll(".accordion-toggle");
 
-accordionToggles.forEach((toggle) => {
-    toggle.addEventListener("click", () => {
-        // Seleciona o conteúdo associado ao botão clicado
-        const contentId = toggle.getAttribute("aria-controls");
-        const content = document.getElementById(contentId);
+    // Check if any accordion buttons exist
+    if (accordionToggles.length === 0) {
+        console.error("No accordion buttons found. Ensure the HTML structure is correct.");
+        return;
+    }
 
-        // Alterna a visibilidade do conteúdo
-        const isExpanded = toggle.getAttribute("aria-expanded") === "true";
-        toggle.setAttribute("aria-expanded", !isExpanded);
-        content.hidden = isExpanded;
+    accordionToggles.forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+            // Get the associated content section
+            const contentId = toggle.getAttribute("aria-controls");
+            const content = document.getElementById(contentId);
 
-        // Reanexa os eventos de clique nas imagens após expandir o acordeão
-        if (!isExpanded) {
-            attachImageClickEvents();
-        }
+            // Check if the content exists
+            if (!content) {
+                console.error(`No content found with id: ${contentId}`);
+                return;
+            }
+
+            // Toggle the expanded state
+            const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+            toggle.setAttribute("aria-expanded", !isExpanded);
+            content.hidden = isExpanded;
+        });
     });
 });
 
-// Inicializa os eventos de clique nas imagens
+// Initializes click events for images
 attachImageClickEvents();

@@ -7,19 +7,19 @@ This is a personal portfolio website showcasing projects and skills. The portfol
 The project is organized as follows:
 
 ```
-personal-portfolio
-├── src
-│   ├── index.html               # Main HTML document for the portfolio
-│   ├── css
-│   │   └── styles.css           # Styles for the portfolio website
-│   ├── js
-│   │   └── script.js            # JavaScript for interactivity
-│   ├── images                   # Directory for images used in the portfolio
-│   └── projects
-│       └── lodash-clone.html    # Detailed view of a specific project
-├── .gitignore                   # Files and directories to ignore by Git
-├── README.md                    # Documentation for the project
-└── LICENSE                      # Licensing terms for the project
+/personal-portfolio/
+├── index.html
+├── contact.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── script.js
+├── images/
+│   └── profile-photo.jpg
+└── projects/
+│   ├── lodash-clone.html
+│   └── cypress-advanced.html
+└── LICENSE                      
 ```
 
 ## Features
